@@ -11,7 +11,6 @@ const copyToClipboard = async (text, element) => {
     try {
         await navigator.clipboard.writeText(text);
         element.innerText = "Copied!";
-        // Resseting element text after 1 second
         setTimeout(() => {
             element.innerText = text;
         }, 1000);
